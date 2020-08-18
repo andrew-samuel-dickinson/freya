@@ -1,29 +1,34 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" content="width=device-width, initial-scale=1">
     <title>Freya's Math Quiz</title>
     <script src="js/data.js"></script> 
     <script src="js/mark.js"></script>    
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body onload = "drawQuestions()">
-    <div class="wrapper">
-      <div class="h_iframe">
-          <!-- a transparent image is preferable -->
-          <img id="photoLink" class="ratio" src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQp6dI58QyEw12MEE_sh3O2wEeBjXWULLQFWA&usqp=CAU"/>
-          <iframe id="youtubeLink"                                    
-                  allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                  src=""
-                  frameborder="0"                  
-                  allowfullscreen
-                  >
-          </iframe>
+    <div class="row">
+      <div class="column">
+        <form id="questionForm">
+        </form>    
+      </div>
+      <div class="column">
+        <div class="wrapper">
+          <div class="h_iframe">
+              <!-- a transparent image is preferable -->
+              <img id="photoLink" class="ratio" src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQp6dI58QyEw12MEE_sh3O2wEeBjXWULLQFWA&usqp=CAU"/>
+              <iframe id="youtubeLink"                                    
+                      allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                      src=""
+                      frameborder="0"                  
+                      allowfullscreen
+                      >
+              </iframe>
+          </div>
+        </div>
       </div>
     </div>
 
-    <form id="questionForm">
-    </form>
-    
   </body>
 </html>
