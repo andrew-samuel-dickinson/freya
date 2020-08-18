@@ -1,11 +1,21 @@
 body {
-   background-color: grey;
+   background-color: rgb(30, 30, 66);
    background-image: url("https://vignette.wikia.nocookie.net/p__/images/3/37/Ladybug_Render.png/revision/latest?cb=20170217200746&path-prefix=protagonist");
    background-blend-mode: screen;
+   /* normal	This is default. Sets the blending mode to normal	
+    multiply	Sets the blending mode to multiply	
+    screen	Sets the blending mode to screen	
+    overlay	Sets the blending mode to overlay	
+    darken	Sets the blending mode to darken	
+    lighten	Sets the blending mode to lighten	
+    color-dodge	Sets the blending mode to color-dodge	
+    saturation	Sets the blending mode to saturation	
+    color	Sets the blending mode to color	
+    luminosity	Sets the blending mode to luminosity */
 }
 
 h1 {
-    color: blue;
+    color: white;
     text-align: center;
 }
 
@@ -49,12 +59,8 @@ body {
     height: 100%;
 }
 
-.question {
-    color: blue;
-}
-
-.answer {
-    color: blue;
+label {
+    color: rgb(255, 255, 139);
 }
 
 input {
