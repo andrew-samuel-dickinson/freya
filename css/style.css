@@ -1,0 +1,23 @@
+body {
+    background-color: powderblue;
+  }
+  h1 {
+    color: blue; text-align: center;
+  }
+  h2 {
+    color: blue; text-align: center;
+  }
+  p {
+    color: red;
+  }
+
+
+html,body        {height:100%;}
+.wrapper         {height:30%;width:30%;margin:0 auto;background:powderblue}
+.h_iframe        {position:relative;}
+.h_iframe {display:block;width:100%;height:100%;}
+.h_iframe iframe {position:absolute;top:0;left:0;width:100%; height:100%;}
+.ratio           {display:block;width:auto;height:100%;}
+
+.question       {color: blue;}
+.answer         {color: blue;}
