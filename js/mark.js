@@ -32,26 +32,22 @@ function markQuestions()
     {
         let ansElt = document.getElementById(answerId(i))
         let ansGiven = ansElt.valueAsNumber;
-        let ansTrue = Number(quAndA(i)["A"]);      
-
-        //TODO: do numeric comparison        
-        isCorrect = (ansGiven == ansTrue);
-
-        resElt = document.getElementById(responseId(i));
+        let ansTrue = Number(quAndA(i)["A"]);
+        let isCorrect = (ansGiven == ansTrue)
         if(isNaN(ansGiven))
         {
-            resElt.innerHTML = "";
-            numUnanswered += 1;
+            numUnanswered += 1;            
+            ansElt.setAttribute("style", "border: 4px solid gray");
         }
         else if(isCorrect)
         {
-            resElt.innerHTML = "\&#x2705";
             numCorrect += 1;
+            ansElt.setAttribute("style", "border: 4px solid green");
         }
         else
         {
-            resElt.innerHTML = "\&#x274C";
             numIncorrect += 1;
+            ansElt.setAttribute("style", "border: 4px solid red");
         }
     } 
     let summaryElt = document.getElementById("summaryId");
@@ -61,23 +57,30 @@ function markQuestions()
     fractionCorrect = numCorrect/numQuestions();
     comment = ""
     img = ""
-    if(fractionCorrect < 0.5)
+    if(fractionCorrect < 0.25)
     {
-        comment = "Keep on trying !!!";
+        comment = "Keep going !!!";
         uTubeElt.src = "";
         photoElt.src = images[0];
     }
-    else if(fractionCorrect < 0.75)
+    else if(fractionCorrect < 0.5)
     {
         comment = "Good";
         uTubeElt.src = "";
         photoElt.src = images[1];
     }
-    else if(fractionCorrect < 1.0)
+    else if(fractionCorrect < 0.75)
     {
-        comment = "Very Good";
+        comment = "Very good";
         uTubeElt.src = "";
         photoElt.src = images[2];
+        
+    }
+    else if(fractionCorrect < 1.0)
+    {
+        comment = "Excellent";
+        uTubeElt.src = "";
+        photoElt.src = images[3];
     }
     else
     {
@@ -93,27 +96,17 @@ function drawQuestions()
 {
     for(i = 0; i < numQuestions(); ++i)
     {
-        let ip1 = i + 1;        
-        let elt = document.createElement("div");
-        elt.className = "question"
+        quForm = document.getElementById("questionForm");
+        let elt = document.createElement("label");
         elt.id = questionId(i);
-        elt.innerHTML = "Q" + (i+1) + ": " + quAndA(i)["Q"];
-        document.body.appendChild(elt);
+        elt.innerHTML = "</br>" + "Q" + (i+1) + ": " + quAndA(i)["Q"] + " ";
+        quForm.appendChild(elt);
 
         let elt2 = document.createElement("input");
         elt2.className = "answer"
         elt2.id = answerId(i);
         elt2.type = "number";
-        elt2.min = "1";
-        elt2.max = "20";
         elt2.setAttribute("onchange", "markQuestions()");
-        //<Q: why is setAttributed needed for onchange but not for min?
-        //elt2.onchange = "markQuestions()";
-
-        document.body.appendChild(elt2);
-
-        let elt3 = document.createElement("div");
-        elt3.id = responseId(i);
-        document.body.appendChild(elt3);
+        quForm.appendChild(elt2);
     }
 }

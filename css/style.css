@@ -1,23 +1,79 @@
 body {
     background-color: powderblue;
-  }
-  h1 {
-    color: blue; text-align: center;
-  }
-  h2 {
-    color: blue; text-align: center;
-  }
-  p {
+}
+
+h1 {
+    color: blue;
+    text-align: center;
+}
+
+h2 {
+    color: blue;
+    text-align: center;
+}
+
+p {
     color: red;
-  }
+}
 
 
-html,body        {height:100%;}
-.wrapper         {height:30%;width:30%;margin:0 auto;background:powderblue}
-.h_iframe        {position:relative;}
-.h_iframe {display:block;width:100%;height:100%;}
-.h_iframe iframe {position:absolute;top:0;left:0;width:100%; height:100%;}
-.ratio           {display:block;width:auto;height:100%;}
+html,
+body {
+    height: 100%;
+}
 
-.question       {color: blue;}
-.answer         {color: blue;}
+.wrapper {
+    height: 30%;
+    width: 30%;
+    margin: 0 auto;
+    background: powderblue
+}
+
+.h_iframe {
+    position: relative;
+}
+
+.h_iframe {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.h_iframe iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.ratio {
+    display: block;
+    width: auto;
+    height: 100%;
+}
+
+.question {
+    color: blue;
+}
+
+.answer {
+    color: blue;
+}
+
+input {
+    width: 5%;
+    padding: 3px 3px;
+    margin: 3px 0;
+    box-sizing: border-box;
+    border: 4px solid gray;
+    border-radius: 4px;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    /* display: none; <- Crashes Chrome on hover */
+    -webkit-appearance: none;
+    margin: 0;
+    /* <-- Apparently some margin are still there even though it's hidden */
+}

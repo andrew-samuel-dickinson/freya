@@ -1,3 +1,4 @@
+// TODO move this to JSON?
 myQaData = [
     {"Q" : "What is 5 x 11", "A" : "55"},
     {"Q" : "What is 8 x 11", "A" : "88"},
@@ -15,7 +16,8 @@ images =
 [
     "https://i.pinimg.com/236x/70/dd/52/70dd5208032fdcac975727e4d1484c18--funny-stuff-so-funny.jpg",
     "https://i.insider.com/5c79a8cfeb3ce837863155f5?width=750&format=jpeg&auto=webp",
-    "https://filmdaily.co/wp-content/uploads/2020/04/funny-animals-lede.jpg" 
+    "https://filmdaily.co/wp-content/uploads/2020/04/funny-animals-lede.jpg", 
+    "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRphb761m4liOHpIMdxOVkPrP7IEq69JQib1g&usqp=CAU"
 ];
 
 video = "https://www.youtube.com/embed/RW61RQZojMQ?autoplay=1";
