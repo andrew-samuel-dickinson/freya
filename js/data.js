@@ -25,4 +25,7 @@ images =
     "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRphb761m4liOHpIMdxOVkPrP7IEq69JQib1g&usqp=CAU"
 ];
 
-video = "https://www.youtube.com/embed/RW61RQZojMQ?autoplay=1";
+video_id = "RW61RQZojMQ";
+video = "https://www.youtube.com/embed/" + video_id + "?autoplay=1";
+
+default_image = "http://placehold.it/800x500"

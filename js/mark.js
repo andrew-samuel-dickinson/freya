@@ -86,7 +86,7 @@ function markQuestions()
     {
         comment = "!!Perfect!!";
         uTubeElt.src = video;
-        photoElt.src = images[0];
+        photoElt.src = default_image;
     }
 
     summaryElt.innerHTML = comment + ": " + numCorrect + " out of " + numQuestions();
