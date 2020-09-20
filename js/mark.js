@@ -84,7 +84,7 @@ function markQuestions()
     }
     else
     {
-        comment = "!!Perfect!!";
+        comment = "YOUR CLUE IS: _ _ A C T            ";
         uTubeElt.src = video;
         photoElt.src = default_image;
     }
