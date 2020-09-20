@@ -89,7 +89,7 @@ function markQuestions()
         photoElt.src = default_image;
     }
 
-    summaryElt.innerHTML = comment + ": " + numCorrect + " out of " + numQuestions();
+    summaryElt.innerHTML = comment;
 }
 
 function drawQuestions()
