@@ -84,7 +84,7 @@ function markQuestions()
     }
     else
     {
-        comment = "YOUR CLUE IS THE LETTERS: H O O B";
+        comment = "YOUR CLUE IS THE LETTERS: K A A C";
         uTubeElt.src = video;
         photoElt.src = default_image;
     }
