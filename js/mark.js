@@ -84,7 +84,7 @@ function markQuestions()
     }
     else
     {
-        comment = "YOUR CLUE IS THE LETTERS: K A A C";
+        comment = final_clue;
         uTubeElt.src = video;
         photoElt.src = default_image;
     }
