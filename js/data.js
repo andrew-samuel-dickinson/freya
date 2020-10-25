@@ -22,7 +22,7 @@ myQaData = [
     {"Q" : "2 + 4 + 6 + 8 + 10 + 12 + 14 + 16 + 18 + 20", "A" : "110"}
 ];
 
-video_id = "kHue-60ItHLz5WEAHaXXzg";
+video_id = "60ItHLz5WEA";
 video = "https://www.youtube.com/embed/" + video_id + "?autoplay=1";
 
 default_image = "http://placehold.it/800x500"
