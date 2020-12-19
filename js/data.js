@@ -29,4 +29,4 @@ video = "https://www.youtube.com/embed/" + video_id + "?autoplay=1";
 
 default_image = "http://placehold.it/800x500"
 
-final_clue = "Your clue is: G W S "
+final_clue = "Your clue is: G L O O"
