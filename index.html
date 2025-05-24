@@ -1,37 +1,404 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8" content="width=device-width, initial-scale=1">
-    <title>Freya's Math Quiz</title>
-    <script src="js/data.js"></script> 
-    <script src="js/pictures.js"></script> 
-    <script src="js/mark.js"></script>    
-    <link rel="stylesheet" href="css/style.css">
-  </head>
-  <body onload = "drawQuestions()">
-    <h1>Freya's Math Quiz</h1>
-    <h2 id="summaryId"></h2>
-    <div class="row">
-      <div class="column" id="left_col">
-        <form id="questionForm">
-        </form>    
-      </div>
-      <div class="column" id="right_col">
-        <div class="wrapper">
-          <div class="h_iframe">
-              <!-- a transparent image is preferable -->
-              <img id="photoLink" class="ratio" src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQp6dI58QyEw12MEE_sh3O2wEeBjXWULLQFWA&usqp=CAU"/>              
-              <iframe id="youtubeLink"                                    
-                      allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                      src=""
-                      frameborder="0"                  
-                      allowfullscreen
-                      >
-              </iframe>
-          </div>
-        </div>
-      </div>
-    </div>
 
-  </body>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+  <title>reveal.js</title>
+
+  <script src="https://d3js.org/d3.v4.min.js"></script>
+  <script src="dist/reveal.js"></script>
+  <script src="plugin/math/math.js"></script>
+  <script src="plugin/notes/notes.js"></script>
+  <script src="plugin/markdown/markdown.js"></script>
+  <script src="plugin/highlight/highlight.js"></script>
+
+  <link rel="stylesheet" href="dist/reset.css" />
+  <link rel="stylesheet" href="dist/reveal.css" />
+  <link rel="stylesheet" href="dist/theme/league.css" id="theme" />  
+  <!-- <link rel="stylesheet" href="dist/theme/beige.css" id="theme" />   -->
+
+  <!-- Theme used for syntax highlighted code -->
+  <!-- <link rel="stylesheet" href="plugin/highlight/monokai.css" id="highlight-theme"/> -->
+  <link rel="stylesheet" href="css/myRevealStyleSheet.css" />
+</head>
+
+<body>
+  <div class="reveal">
+    <div class="slides">
+      <section>
+        <br>
+        <h2 class=front-title> Freya's Math Revision Notes 2025</a>
+        </h2>
+        <br>
+        
+        <!-- <p class="revealSelector">
+          Created using <a href="http://revealjs.com">reveal.js</a> and the theme:
+          <select id="myTheme" onchange="changeTheme()" color=rgb(0, 160, 200) style="font-size:100%;background-color:rgba(120,120,120,0);color:rga(125,0,0)">
+            <option value="league">league</option>
+            <option value="black">black</option>
+            <option value="white">white</option>
+            <option value="league">league</option>
+            <option value="beige">beige</option>          
+            <option value="sky">sky</option>
+            <option value="night">night</option>
+            <option value="serif">serif</option>
+            <option value="simple">simple</option>
+            <option value="solarized">solarized</option>
+            <option value="blood">blood</option>
+            <option value="moon">moon</option>
+          </select>
+        </p> -->
+
+        <!-- <label for="myTheme" class="revealSelector">Created with reveal.js</label> -->
+        <script>          
+          function changeTheme() {            
+            var themeVal = document.getElementById("myTheme").value;
+            document.getElementById("theme").href = "dist/theme/" + themeVal + ".css";
+          }
+          </script>
+        
+      </section>
+
+      <section>
+        <h2 class="slideheader">Factors</h2>
+        <div>
+        <ul>
+          <li class="fragment bullet2">
+          Factor: A divisor of a number.
+          </li>
+          <li class="fragment bullet2">
+            Factors of 8 are: 
+            <ul>
+              <li class="fragment bullet2">
+                <span style="color: #ff2222">1</span>,
+                <span style="color: #5299af">2</span>,
+                <span style="color: #22ff22">4</span>,
+                and 8             
+              </li>              
+            </ul>
+          </li>
+          <li class="fragment bullet2">
+            Factors of 12 are: 
+            <ul>
+              <li class="fragment bullet2">
+                <span style="color: #ff2222">1</span>,
+                <span style="color: #5299af">2</span>,
+                3,
+                <span style="color: #22ff22">4</span>,
+                6 and 
+                12                
+              </li>              
+            </ul>
+          </li>
+          <li class="fragment bullet2">
+            Common factors of 8 and 12 are:
+            <ul>
+              <li class="fragment bullet2">
+                <span style="color: #ff2222">1</span>,
+                <span style="color: #5299af">2</span> and 
+                <span style="color: #22ff22">4</span>
+              </li>              
+            </ul>
+          </li>
+          <li class="fragment bullet2">
+            The <u>highest common factor</u> 8 and 12 is:
+            <ul>
+            <li class="fragment bullet2">
+              $$
+              hcf(8,12)=\color{lime}{4}
+              $$
+            </li>
+            </ul>
+          </li>
+          </ul>
+          </li>
+        </ul>
+      </section>
+
+      <section>
+        <h2 class="slideheader">Multiples</h2>
+        <div>
+        <ul>
+          <!-- <li class="fragment bullet2">
+          Multiple of n: number that may be divided by n without a remainder.
+          </li> -->
+          <li class="fragment bullet2">
+            Multiples of 8 are: 
+            <ul>
+              <li class="fragment bullet2">
+                8,
+                16,
+                <span style="color: #ff2222">24</span>,
+                32,
+                40,
+                <span style="color: #5299af">48</span>,
+                56,
+                64,
+                <span style="color: #22ff22">72</span>,
+                ...
+              </li>              
+            </ul>
+          </li>
+          <li class="fragment bullet2">
+          Multiples of 12 are: 
+            <ul>
+              <li class="fragment bullet2">
+                12,
+                <span style="color: #ff2222">24</span>,
+                36,                
+                <span style="color: #5299af">48</span>,
+                60,                
+                <span style="color: #22ff22">72</span>,
+                ...
+              </li>
+            </ul>
+          </li>
+          <li class="fragment bullet2">
+          The <u>common</u> multiples of 8 and 12 are: 
+            <ul>
+              <li class="fragment bullet2">                
+                <span style="color: #ff2222">24</span>,
+                <span style="color: #5299af">48</span>,
+                <span style="color: #22ff22">72</span>,
+                ...
+              </li>
+            </ul>
+          </li>         
+          <li class="fragment bullet2">
+            The <u>least common multiple</u> 8 and 12 is:
+            <ul>
+            <li class="fragment bullet2">
+              $$
+              lcm(8,12)=\color{red}{24}
+              $$
+            </li>
+            </ul>
+          </li>            
+      </section>
+
+      <section>
+        <h2 class="slideheader">Link between the LCM and HCF</h2>
+        <div>
+        <ul>
+          <li class="fragment bullet2">
+            The lcm and hcf are linked, eg:
+            <ul>
+            <li class="fragment bullet2">
+              $$
+              lcm(8,12)=\frac{8 \times 12}{hcf(8,12)} = \frac{96}{4} = 24
+              $$
+            </li>
+            </ul>
+            <li class="fragment bullet2">
+              So, the lcm(11, 17) is 
+              <ul>
+                <li class="fragment bullet2">
+              $$
+              lcm(11,17)=\frac{11 \times 17}{hcf(11,17)} = \frac{187}{1} = 187
+              $$
+              </ul>
+            </li>
+            <li class="fragment bullet2">
+              and the lcm(8, 300) is 
+              <ul>
+                <li class="fragment bullet2">
+              $$
+              lcm(8,30)=\frac{8 \times 30}{hcf(8,30)} = \frac{240}{2} = 120
+              $$
+              </ul>
+            </li>       
+            </li>              
+            </ul>
+      </section>
+
+      <section>
+        <h2 class="slideheader">Prime Numbers</h2>
+        <div>
+        <ul>
+          <li class="fragment bullet3">            
+            A prime number is:
+            <ul>
+            <li class="fragment bullet2">
+              a number with exactly two factors (1 and itself)
+            </li>
+            </ul>
+          </li>
+          <li class="fragment bullet3">            
+            First five primes are
+            <ul>
+            <li class="fragment bullet2">
+              2, 3, 5, 7, 11,...
+            </li>
+            </ul>
+          </li>
+          <li class="fragment bullet3">            
+            Any whole number (integer) may be written
+            <ul>
+            <li class="fragment bullet2">
+              as a unique product of primes
+            </li>
+            </ul>
+          </li>
+          <li class="fragment bullet3">            
+            12 may be written as
+            <ul>
+            <li class="fragment bullet2">
+              $$
+              12 = 2^2 \times 3^1 = 2^2 \times 3
+              $$
+            </li>
+            </ul>
+          </li>
+
+          <li class="fragment bullet3">            
+            8 may be written as
+            <ul>
+            <li class="fragment bullet2">
+              $$
+              8 = 2^3
+              $$
+            </li>
+            </ul>
+          </li>
+
+          <li class="fragment bullet3">            
+            100 may be written as
+            <ul>
+            <li class="fragment bullet2">
+              $$
+              100 = 2^2 \times 5^2
+              $$
+            </li>
+            </ul>
+          </li>
+      </section>
+
+      <section>
+        <h2 class="slideheader">Prime Numbers - hcf and lcm</h2>
+        <div>
+        <ul>
+
+          <li class="fragment bullet3">            
+            Prime numbers can be used to calculate the lcm and hcf of two numbers.
+          </li>
+          <li class="fragment bullet2">
+              $$
+              12 = 2^2 \times 3 = 2^\color{red}{2} \times 3^\color{lime}{1} \\
+              8 = 2^3 = 2^\color{cyan}{3} \times 3^\color{yellow}{0}
+              $$
+            </li>
+          <li class="fragment bullet3">            
+            The highest common factor can then be calculated as
+            <ul>
+            <li class="fragment bullet2">
+              $$
+              \begin{aligned}
+              hcf(8,12) =& 2^{min(\color{red}{2}, \color{cyan}{3})} \times 3^{min(\color{lime}{1}, \color{yellow}{0})} \\
+              =& 2^{\color{red}{2}} \times 3^{\color{yellow}{0}} \\
+              =& 4
+              \end{aligned}
+              $$
+            </li>
+            </ul>
+          </li>
+          <li class="fragment bullet3">            
+            The lowest common multiple can then be calculated as
+            <ul>
+            <li class="fragment bullet2">
+              $$
+              \begin{aligned}
+              lcm(8,12) =& 2^{max(\color{red}{2}, \color{cyan}{3})} \times 3^{max(\color{lime}{1}, \color{yellow}{0})} \\
+              =& 2^{\color{cyan}{3}} \times 3^{\color{lime}{1}} \\
+              =& 24
+              \end{aligned}
+              $$
+            </li>
+            </ul>
+          </li>
+          
+      </section>
+
+<section>
+        <h2 class="slideheader">Prime Numbers - hcf and lcm</h2>
+        <div>
+        <ul>
+           <li class="fragment bullet3">            
+            What is lcm(30, 100)?
+            <ul>
+            <li class="fragment bullet2">
+              $$
+              \begin{aligned}
+              &30 = 2^1 \times 3^\color{lime}{1} \times 5^1 \text{ and }
+              100= 2^\color{red}{2} \times 3^0 \times 5^\color{cyan}{2} \\
+              \implies& lcm(30, 100) = 2^\color{red}{2} \times 3^\color{lime}{1} \times 5^\color{cyan}{2} = 300
+              \end{aligned}
+              $$
+            </li>
+            </ul>
+          </li>
+          <li class="fragment bullet3">            
+            What is lcm(16, 20)?
+            <ul>
+            <li class="fragment bullet2">
+              $$
+              \begin{aligned}
+              &16 = 2^\color{lime}{4} \times 5^0 \text{ and }
+              20= 2^2 \times 5^\color{cyan}{1} \\
+              \implies& lcm(16, 20) = 2^\color{lime}{4} \times 5^\color{cyan}{1} = 80
+              \end{aligned}
+              $$
+            </li>
+            </ul>
+          </li>
+          <li class="fragment bullet3">            
+            What is hcf(16, 28)?
+            <ul>
+            <li class="fragment bullet2">
+              $$
+              \begin{aligned}
+              &16 = 2^4 \times 7^\color{red}{0} \text{ and }
+              28= 2^\color{lime}{2} \times 7^1 \\
+              \implies& hcf(16, 28) = 2^\color{lime}{2} \times 7^\color{red}{0} = 4
+              \end{aligned}
+              $$
+            </li>
+            </ul>
+          </li>
+        </ul>
+      </section>
+
+  <script>
+    // More info about initialization & config:
+    // - https://revealjs.com/initialization/
+    // - https://revealjs.com/config/
+    Reveal.initialize({
+      hash: true,
+
+      // Learn about plugins: https://revealjs.com/plugins/
+      plugins: [RevealMarkdown, RevealHighlight, RevealNotes]
+    });
+  </script>
+  <script>
+    Reveal.initialize({
+      history: true,
+      transition: "linear",
+
+      math: {
+        // mathjax: 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js',
+        config: "TeX-AMS_HTML-full",
+        TeX: {
+          Macros: {
+            R: "\\mathbb{R}",
+            set: ["\\left\\{#1 \\; ; \\; #2\\right\\}", 2]
+          }
+        }
+      },
+
+      plugins: [RevealMath]
+    });
+  </script>
+</body>
+
 </html>

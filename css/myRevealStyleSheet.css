@@ -1,0 +1,90 @@
+h2.front-title{
+    text-align: center;
+    font-size:150%;
+}
+
+h2.front-subtitle {
+    text-align: center;    
+    font-size:100%;
+}
+
+.container{
+    display: flex;
+}
+
+.col{
+    flex: 1;
+}
+
+.multiCol {
+    display: table;
+    table-layout: fixed; 
+    width: 100%;
+    text-align: left; 
+        display: table-cell;
+        vertical-align: top;
+        width: 50%;
+        padding: 2% 0 2% 3%; 
+    }
+
+p.caption{
+    font-size:70%
+}
+
+p.captionSmall{
+    font-size:50%
+}
+
+p.captionSmallLeft{
+    font-size:45%;
+    text-align:left
+}
+
+h2.slideheader{
+    font-size:125%
+}
+
+li{
+    font-size: 70%;
+}
+
+li.bullet2{
+    font-size:85%
+}
+
+li.bullet3{
+    font-size:70%
+}
+
+li.bullet4{
+    font-size:55%
+}
+
+li.mathbullet{
+    font-size: 70%;
+    list-style-type: none;
+}
+
+li.mathbullet2{
+    font-size: 70%;
+}
+
+li.reference{
+    font-size: 47%;
+    /* list-style-type: none; */
+}
+
+.revealSelector{
+    font-size: 20%;
+    /* list-style-type: none; */
+}
+
+.MathJax {
+    /* font-size: 80%; */
+    }
+
+select {
+    color: rgb(0, 160, 200);
+    style: "font-size:100%;background-color:rgba(120,120,120,0);color:rga(125,0,0)"
+}
+
